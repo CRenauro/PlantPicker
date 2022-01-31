@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atz-nM-1ci">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Plants-->
+        <scene sceneID="rRq-OP-GJU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="atz-nM-1ci" customClass="PlantCollectionViewController" customModule="PlantPicker" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9S7-ko-623">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" sectionInsetReference="layoutMargins" id="lu7-oa-qvH">
+                            <size key="itemSize" width="100" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="dataCell" id="CHn-Ss-Ijh" customClass="PlantsCollectionViewCell" customModule="PlantPicker" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="100" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WFZ-cv-3r6">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="d61-Sn-NLv">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="115" id="5b6-P4-9Uk"/>
+                                                <constraint firstAttribute="width" constant="100" id="p2r-Ud-a5h"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3Y-Hz-AcZ">
+                                            <rect key="frame" x="0.0" y="115" width="100" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="grR-aZ-CGa"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ot8-Oe-ulO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="d61-Sn-NLv" firstAttribute="top" secondItem="WFZ-cv-3r6" secondAttribute="top" id="CaY-9u-9gn"/>
+                                        <constraint firstItem="d61-Sn-NLv" firstAttribute="leading" secondItem="WFZ-cv-3r6" secondAttribute="leading" id="Kj8-iP-LSO"/>
+                                        <constraint firstAttribute="bottom" secondItem="u3Y-Hz-AcZ" secondAttribute="bottom" id="dgh-i8-uNu"/>
+                                        <constraint firstItem="d61-Sn-NLv" firstAttribute="leading" secondItem="u3Y-Hz-AcZ" secondAttribute="leading" id="kEn-Fm-8Qh"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u3Y-Hz-AcZ" secondAttribute="trailing" id="vCx-O9-0Sz"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="100" height="150"/>
+                                <connections>
+                                    <outlet property="plantImageView" destination="d61-Sn-NLv" id="yjl-Dm-WyK"/>
+                                    <outlet property="plantNameLabel" destination="u3Y-Hz-AcZ" id="0ep-Cq-S1t"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="atz-nM-1ci" id="xCB-iC-Zzl"/>
+                            <outlet property="delegate" destination="atz-nM-1ci" id="RtI-pM-4gf"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Plants" id="zhl-t7-dsd"/>
+                    <connections>
+                        <segue destination="9S4-vD-ODf" kind="presentation" identifier="showDetail" id="Q26-42-OsN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uj-TK-BXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="692.75362318840587" y="6.6964285714285712"/>
+        </scene>
+        <!--Plant Detail View Controller-->
+        <scene sceneID="ca5-1f-LZe">
+            <objects>
+                <viewController id="9S4-vD-ODf" customClass="PlantDetailViewController" customModule="PlantPicker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rph-95-aZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tqh-qe-pMj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="819"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-hl-QdQ">
+                                <rect key="frame" x="374" y="10" width="30" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fIO-7i-43n"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="jeg-e3-JOb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="fsu-4W-BPw" kind="unwind" unwindAction="unwindToMainWithSegue:" id="kjy-3w-SAT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KPf-8d-v00"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tqh-qe-pMj" firstAttribute="leading" secondItem="KPf-8d-v00" secondAttribute="leading" id="48F-NK-Qaf"/>
+                            <constraint firstItem="tqh-qe-pMj" firstAttribute="bottom" secondItem="KPf-8d-v00" secondAttribute="bottom" id="MBB-WE-P4V"/>
+                            <constraint firstItem="tqh-qe-pMj" firstAttribute="top" secondItem="KPf-8d-v00" secondAttribute="top" id="Q5s-gy-ViE"/>
+                            <constraint firstItem="KPf-8d-v00" firstAttribute="trailing" secondItem="Gex-hl-QdQ" secondAttribute="trailing" constant="10" id="XBU-wR-zZh"/>
+                            <constraint firstItem="KPf-8d-v00" firstAttribute="bottom" secondItem="Gex-hl-QdQ" secondAttribute="bottom" constant="778" id="XPh-Ly-wPp"/>
+                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="leading" secondItem="KPf-8d-v00" secondAttribute="leading" constant="374" id="gbG-5T-Gqg"/>
+                            <constraint firstItem="tqh-qe-pMj" firstAttribute="trailing" secondItem="KPf-8d-v00" secondAttribute="trailing" id="u1F-mT-7Sk"/>
+                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="top" secondItem="KPf-8d-v00" secondAttribute="top" constant="10" id="xUP-pC-kM5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plantImageView" destination="tqh-qe-pMj" id="B26-4l-ih3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afd-qT-SW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fsu-4W-BPw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1444.9275362318842" y="14.732142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

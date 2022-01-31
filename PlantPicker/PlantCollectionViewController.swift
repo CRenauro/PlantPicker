@@ -17,7 +17,8 @@ class PlantCollectionViewController: UICollectionViewController, UICollectionVie
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
 
     }
-
+  
+    
     
     private var plant : [Plant] = [Plant(image: "passion", name: "passion"),
                                     Plant(image: "sunflower", name: "sunflower"),
@@ -79,15 +80,8 @@ class PlantCollectionViewController: UICollectionViewController, UICollectionVie
     
         // Configure the cell
         let plant = plant[indexPath.row]
-        
-//        let plantImageView = UIImageView(frame: cell.contentView.bounds)//added
-        
-//        cell.plantImageView.image = UIImage(named: plant.image) // turning this on loads the images but at the wrong size with errors
-        
+        cell.plantImageView.image = UIImage(named: plant.image)
         cell.plantImageView.contentMode = .scaleAspectFit //added
-        cell.clipsToBounds = true //added
-//        cell.frame = CGRect(x: 0, y: 0, width: 122, height: 130
-//        )
         cell.plantNameLabel.text = plant.name
     
         return cell

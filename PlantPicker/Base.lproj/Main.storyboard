@@ -91,11 +91,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-hl-QdQ">
-                                <rect key="frame" x="374" y="10" width="30" height="22"/>
+                                <rect key="frame" x="349" y="37" width="30" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fIO-7i-43n"/>
+                                    <constraint firstAttribute="height" constant="22" id="fIO-7i-43n"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="jeg-e3-JOb"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="xmark.circle.fill" catalog="system"/>
                                 <connections>
@@ -109,11 +110,11 @@
                             <constraint firstItem="tqh-qe-pMj" firstAttribute="leading" secondItem="KPf-8d-v00" secondAttribute="leading" id="48F-NK-Qaf"/>
                             <constraint firstItem="tqh-qe-pMj" firstAttribute="bottom" secondItem="KPf-8d-v00" secondAttribute="bottom" id="MBB-WE-P4V"/>
                             <constraint firstItem="tqh-qe-pMj" firstAttribute="top" secondItem="KPf-8d-v00" secondAttribute="top" id="Q5s-gy-ViE"/>
-                            <constraint firstItem="KPf-8d-v00" firstAttribute="trailing" secondItem="Gex-hl-QdQ" secondAttribute="trailing" constant="10" id="XBU-wR-zZh"/>
-                            <constraint firstItem="KPf-8d-v00" firstAttribute="bottom" secondItem="Gex-hl-QdQ" secondAttribute="bottom" constant="778" id="XPh-Ly-wPp"/>
-                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="leading" secondItem="KPf-8d-v00" secondAttribute="leading" constant="374" id="gbG-5T-Gqg"/>
+                            <constraint firstItem="KPf-8d-v00" firstAttribute="trailing" secondItem="Gex-hl-QdQ" secondAttribute="trailing" constant="35" id="XBU-wR-zZh"/>
+                            <constraint firstItem="KPf-8d-v00" firstAttribute="bottom" secondItem="Gex-hl-QdQ" secondAttribute="bottom" constant="751" id="XPh-Ly-wPp"/>
+                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="leading" secondItem="KPf-8d-v00" secondAttribute="leading" constant="349" id="gbG-5T-Gqg"/>
                             <constraint firstItem="tqh-qe-pMj" firstAttribute="trailing" secondItem="KPf-8d-v00" secondAttribute="trailing" id="u1F-mT-7Sk"/>
-                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="top" secondItem="KPf-8d-v00" secondAttribute="top" constant="10" id="xUP-pC-kM5"/>
+                            <constraint firstItem="Gex-hl-QdQ" firstAttribute="top" secondItem="KPf-8d-v00" secondAttribute="top" constant="37" id="xUP-pC-kM5"/>
                         </constraints>
                     </view>
                     <connections>

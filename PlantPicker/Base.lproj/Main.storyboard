@@ -27,7 +27,7 @@
                             <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="dataCell" id="CHn-Ss-Ijh" customClass="PlantsCollectionViewCell" customModule="PlantPicker" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="100" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WFZ-cv-3r6">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WFZ-cv-3r6">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -49,6 +49,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <viewLayoutGuide key="safeArea" id="3Ca-9B-mkp"/>
                                     <constraints>
                                         <constraint firstItem="d61-Sn-NLv" firstAttribute="top" secondItem="WFZ-cv-3r6" secondAttribute="top" id="CaY-9u-9gn"/>
                                         <constraint firstItem="d61-Sn-NLv" firstAttribute="leading" secondItem="WFZ-cv-3r6" secondAttribute="leading" id="Kj8-iP-LSO"/>
